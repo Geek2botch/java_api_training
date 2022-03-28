@@ -20,6 +20,7 @@ public class Launcher {
             HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
             server.createContext("/ping", new PingHandler());
             server.createContext("/api/start/game", new GameHandler());
+            server.createContext("/api/game/fire", new NavyFireHandler());
             server.setExecutor(executor);
             server.start();
         }
@@ -39,6 +40,6 @@ public class Launcher {
             System.out.println("Bad argument");
             System.exit(-1);
         }
-
+        
     }
 }

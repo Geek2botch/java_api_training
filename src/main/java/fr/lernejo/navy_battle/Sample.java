@@ -1,9 +1,8 @@
-package fr.lernejo;
+package fr.lernejo.navy_battle;
 
 import java.util.function.BiFunction;
 
 public class Sample {
-
     public int op(Operation op, int a, int b) {
         return op.func.apply(a, b);
     }
